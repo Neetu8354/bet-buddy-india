@@ -20,8 +20,8 @@ const SportsSection = () => (
     <div className="flex items-end justify-between mb-8">
       <div>
         <div className="eyebrow mb-2">Sports betting</div>
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Markets across every major sport</h2>
-        <p className="text-sm text-muted-foreground mt-2 max-w-xl">Industry-leading odds in INR on cricket, kabaddi, tennis, esports and more.</p>
+        <h2 className="text-2xl md:text-4xl font-bold tracking-tight">Every ball. Every match. <span className="text-gold">Every market.</span></h2>
+        <p className="text-sm text-muted-foreground mt-2 max-w-xl">Live IPL 2026, T20 Worlds, BBL, PSL, kabaddi, tennis and esports — with the deepest in-play markets in India and odds that consistently beat the books.</p>
       </div>
       <button onClick={openWhatsApp} className="hidden md:inline-flex text-sm text-foreground/70 hover:text-gold transition-colors">All sports →</button>
     </div>

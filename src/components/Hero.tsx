@@ -17,16 +17,16 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
 
         <div className="container relative z-10 h-full flex flex-col justify-center max-w-3xl">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[68px] font-semibold leading-[1.05] mb-4 sm:mb-5 tracking-tight">
-            India's most trusted<br className="hidden sm:block" />{" "}
-            <span className="text-gold font-semibold">cricket betting</span> exchange
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[72px] font-extrabold leading-[1.02] mb-4 sm:mb-5 tracking-tight">
+            Where India bets smarter.<br className="hidden sm:block" />{" "}
+            <span className="text-gold">Win faster.</span>
           </h1>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-xl leading-relaxed">
-            Bet on every IPL match, international cricket, kabaddi and live casino. Instant INR deposits and 5-minute withdrawals — managed entirely on WhatsApp.
+            India's sharpest odds on IPL 2026, international cricket and live casino — backed by 60-second WhatsApp onboarding, instant INR deposits and withdrawals that hit your bank in under five minutes.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
-            <button onClick={openWhatsApp} className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-md bg-gold text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
-              <MessageCircle className="w-4 h-4" /> Get your ID on WhatsApp
+            <button onClick={openWhatsApp} className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-md bg-gold text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity btn-glow">
+              <MessageCircle className="w-4 h-4" /> Claim your ID — 60 seconds
             </button>
             <button onClick={openWhatsApp} className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-md border hairline text-foreground hover:border-gold/50 hover:text-gold font-medium text-sm transition-colors">
               View promotions <ArrowRight className="w-4 h-4" />
