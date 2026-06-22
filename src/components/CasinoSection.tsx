@@ -21,8 +21,8 @@ const CasinoSection = () => (
       <div className="flex items-end justify-between mb-8">
         <div>
           <div className="eyebrow mb-2">Live casino</div>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Authentic Indian casino experience</h2>
-          <p className="text-sm text-muted-foreground mt-2 max-w-xl">Real dealers and real cash on Teen Patti, Andar Bahar, Roulette and more.</p>
+          <h2 className="text-2xl md:text-4xl font-bold tracking-tight">A live casino built for <span className="text-gold">Indian nights</span></h2>
+          <p className="text-sm text-muted-foreground mt-2 max-w-xl">Real Indian dealers. Real INR stakes. Teen Patti, Andar Bahar, Roulette, Dragon Tiger and 1,000+ Evolution &amp; Pragmatic slots.</p>
         </div>
         <button onClick={openWhatsApp} className="hidden md:inline-flex text-sm text-foreground/70 hover:text-gold transition-colors">All games →</button>
       </div>

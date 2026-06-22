@@ -13,8 +13,8 @@ const features = [
 const Features = () => (
   <section className="container py-16">
     <div className="text-center mb-10 max-w-2xl mx-auto">
-      <div className="eyebrow mb-2">Why Yolo365</div>
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Built for Indian players</h2>
+      <div className="eyebrow mb-2">Why YOLO365</div>
+      <h2 className="text-2xl md:text-4xl font-bold tracking-tight">Built for Indian players.<br className="hidden sm:block" /> Engineered for <span className="text-gold">winners.</span></h2>
     </div>
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {features.map((f) => (

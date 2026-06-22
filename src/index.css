@@ -6,53 +6,54 @@
 
 @layer base {
   :root {
-    --background: 220 15% 5%;
-    --foreground: 40 25% 94%;
+    /* Charcoal & Ember — premium dark warm */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 220 14% 8%;
-    --card-foreground: 40 25% 94%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 220 14% 8%;
-    --popover-foreground: 40 25% 94%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 43 75% 55%;        /* Refined gold */
-    --primary-foreground: 220 15% 5%;
+    --primary: 14 78% 57%;        /* Ember #E85D3A */
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 55% 38%;
-    --secondary-foreground: 40 25% 94%;
+    --secondary: 14 78% 57%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 12% 12%;
-    --muted-foreground: 40 8% 62%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 64%;
 
-    --accent: 142 50% 42%;
-    --accent-foreground: 220 15% 5%;
+    --accent: 14 90% 67%;
+    --accent-foreground: 0 0% 6%;
 
     --destructive: 0 70% 48%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 15% 16%;
-    --input: 220 12% 12%;
-    --ring: 43 75% 55%;
+    --border: 0 0% 14%;
+    --input: 0 0% 12%;
+    --ring: 14 78% 57%;
 
-    --radius: 0.5rem;
+    --radius: 0.875rem;
 
-    /* Brand tokens */
-    --gold: 43 75% 55%;
-    --gold-glow: 43 80% 62%;
-    --gold-deep: 38 65% 42%;
-    --crimson: 0 60% 38%;
-    --crimson-deep: 0 65% 22%;
-    --whatsapp: 142 50% 42%;
+    /* Brand tokens — ember replaces gold (class names kept for compatibility) */
+    --gold: 14 78% 57%;
+    --gold-glow: 14 100% 68%;
+    --gold-deep: 16 70% 45%;
+    --crimson: 14 78% 57%;
+    --crimson-deep: 16 80% 38%;
+    --whatsapp: 142 60% 45%;
 
-    --gradient-gold: linear-gradient(180deg, hsl(43 80% 62%) 0%, hsl(43 75% 55%) 50%, hsl(38 65% 42%) 100%);
-    --gradient-crimson: linear-gradient(135deg, hsl(0 60% 38%) 0%, hsl(0 65% 22%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(220 15% 5% / 0.1) 0%, hsl(220 15% 5% / 0.85) 75%, hsl(220 15% 5%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(220 14% 9%) 0%, hsl(220 14% 7%) 100%);
-    --gradient-gold-text: linear-gradient(180deg, hsl(43 85% 70%) 0%, hsl(43 75% 55%) 100%);
+    --gradient-gold: linear-gradient(180deg, hsl(14 100% 68%) 0%, hsl(14 78% 57%) 55%, hsl(16 70% 45%) 100%);
+    --gradient-crimson: linear-gradient(135deg, hsl(14 78% 57%) 0%, hsl(16 80% 38%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 4% / 0.1) 0%, hsl(0 0% 4% / 0.82) 70%, hsl(0 0% 6%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 10%) 0%, hsl(0 0% 7%) 100%);
+    --gradient-gold-text: linear-gradient(180deg, hsl(14 100% 72%) 0%, hsl(14 78% 57%) 100%);
 
-    --shadow-gold: 0 8px 24px -8px hsl(43 75% 55% / 0.35);
-    --shadow-card: 0 4px 20px -8px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 40px hsl(43 80% 62% / 0.18);
+    --shadow-gold: 0 10px 32px -10px hsl(14 78% 57% / 0.45);
+    --shadow-card: 0 8px 28px -12px hsl(0 0% 0% / 0.65);
+    --shadow-glow: 0 0 56px hsl(14 100% 68% / 0.22);
 
     --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -62,14 +63,15 @@
   * { @apply border-border; }
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Epilogue', system-ui, sans-serif;
     font-feature-settings: 'cv11', 'ss01';
     background:
-      radial-gradient(ellipse 80% 50% at 50% 0%, hsl(43 40% 8% / 0.35) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 50% at 50% 0%, hsl(14 60% 12% / 0.35) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 10%, hsl(14 80% 14% / 0.18) 0%, transparent 60%),
       hsl(var(--background));
   }
-  h1, h2, h3, h4 { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; letter-spacing: -0.025em; }
-  h1 { letter-spacing: -0.035em; }
+  h1, h2, h3, h4 { font-family: 'Urbanist', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.025em; }
+  h1 { letter-spacing: -0.04em; font-weight: 800; }
 }
 
 @layer components {
