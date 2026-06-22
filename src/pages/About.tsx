@@ -29,7 +29,7 @@ const About = () => {
   ];
 
   const values = [
-    { icon: ShieldCheck, title: "Licensed & Regulated", desc: "Operating under Curaçao eGaming license with full KYC compliance for Indian players." },
+    { icon: ShieldCheck, title: "Secure & Compliant", desc: "Full KYC compliance, offshore-regulated operations, and transparent terms for Indian players." },
     { icon: Zap, title: "60-Second ID Activation", desc: "WhatsApp-first onboarding — fastest cricket betting ID delivery in India." },
     { icon: Lock, title: "256-bit SSL Security", desc: "Bank-grade encryption protects every deposit, withdrawal, and personal detail." },
     { icon: HeartHandshake, title: "Responsible Gaming", desc: "Self-exclusion, deposit limits, and 18+ verification on every account." },
@@ -41,9 +41,9 @@ const About = () => {
     <div className="min-h-screen">
       <SEO
         title="About YOLO365 — India's Trusted Cricket Betting ID & Live Casino Site"
-        description="Learn about YOLO365 — India's most trusted online cricket betting exchange since 2021. 5 lakh+ users, instant UPI deposits, 5-minute withdrawals, licensed & regulated."
+        description="Learn about YOLO365 — India's most trusted online cricket betting exchange since 2021. 5 lakh+ users, instant UPI deposits, 5-minute withdrawals, secure & regulated."
         canonical="/about"
-        keywords="about YOLO365, YOLO365 review, trusted cricket betting site India, licensed online betting India, YOLO365 company"
+        keywords="about YOLO365, YOLO365 review, trusted cricket betting site India, online betting India, YOLO365 company"
         jsonLd={ld}
       />
       <Header />

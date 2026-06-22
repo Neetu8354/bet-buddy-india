@@ -31,7 +31,7 @@ const Cricket = () => (
       </>
     }
     faqs={[
-      { q: "Is online cricket betting legal in India?", a: "Skill-based betting on offshore exchanges like YOLO365 operates in a grey area in India. We hold a Curaçao eGaming license and accept Indian players, but you should check your state laws — some states (Telangana, AP, Tamil Nadu) restrict online gambling." },
+      { q: "Is online cricket betting legal in India?", a: "Online cricket betting on offshore platforms like YOLO365 operates in a legal grey area in most Indian states. You should check your state laws before playing — some states (Telangana, AP, Tamil Nadu) restrict online gambling." },
       { q: "How fast is withdrawal on YOLO365?", a: "UPI and IMPS withdrawals are processed in under 5 minutes during business hours. Bank transfers above ₹50,000 may take up to 30 minutes." },
       { q: "What's the minimum deposit for cricket betting?", a: "₹100 via UPI. We accept PhonePe, GPay, Paytm, BHIM, and direct bank transfer." },
       { q: "Can I bet live during the match?", a: "Yes. YOLO365 offers in-play markets that update every ball — match-winner, next-over runs, top batsman, and 50+ session markets." },

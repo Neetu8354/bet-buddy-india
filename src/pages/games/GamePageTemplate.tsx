@@ -61,7 +61,7 @@ const GamePageTemplate = ({
     {
       "@context": "https://schema.org",
       "@type": "HowTo",
-      name: `How to play ${h1} on YOLO365`,
+      name: `How to play ${h1}`,
       step: howToPlay.map((s, i) => ({
         "@type": "HowToStep",
         position: i + 1,
@@ -103,7 +103,7 @@ const GamePageTemplate = ({
         </header>
 
         <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Why play {h1} on YOLO365</h2>
+          <h2 className="text-2xl font-bold mb-6">Why play {h1}</h2>
           <div className="grid md:grid-cols-3 gap-5">
             {highlights.map((h) => (
               <div key={h.title} className="p-6 rounded-xl border hairline bg-card/40">
@@ -116,7 +116,7 @@ const GamePageTemplate = ({
         </section>
 
         <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">How to play {h1} on YOLO365</h2>
+          <h2 className="text-2xl font-bold mb-6">How to play {h1}</h2>
           <ol className="space-y-3 max-w-3xl">
             {howToPlay.map((s, i) => (
               <li key={i} className="flex gap-3 p-4 rounded-md border hairline bg-card/30">
@@ -158,7 +158,7 @@ const GamePageTemplate = ({
         )}
 
         <section className="rounded-2xl border hairline bg-card/40 p-8 text-center">
-          <h2 className="text-2xl font-bold mb-2">Ready to play {h1}?</h2>
+          <h2 className="text-2xl font-bold mb-2">Ready to play?</h2>
           <p className="text-muted-foreground mb-5">Get your YOLO365 ID on WhatsApp in 60 seconds — instant UPI deposit, 5-min withdrawal.</p>
           <button onClick={openWhatsApp} className="px-7 h-12 rounded-md bg-gold text-primary-foreground font-semibold hover:opacity-90">
             Get ID on WhatsApp

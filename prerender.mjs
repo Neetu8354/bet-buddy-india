@@ -55,8 +55,15 @@ async function prerender() {
     try {
       const { html: appHtml, head } = render(route);
 
-      // Replace the SSR outlet with rendered HTML
-      let finalHtml = template.replace("<!--ssr-outlet-->", appHtml);
+      // Extract JSON-LD scripts from SSR body HTML and move them to <head>
+      const ldScripts = [];
+      const cleanAppHtml = appHtml.replace(
+        /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g,
+        (_match, content) => { ldScripts.push(content); return ""; }
+      );
+
+      // Replace the SSR outlet with rendered HTML (JSON-LD removed from body)
+      let finalHtml = template.replace("<!--ssr-outlet-->", cleanAppHtml);
 
       // Replace existing <head> tags with SSR-generated ones from Helmet.
       // This avoids duplicate <title>, <meta>, <link rel="canonical"> etc.
@@ -76,8 +83,13 @@ async function prerender() {
         finalHtml = finalHtml.replace(/<meta\s+name="twitter:description"[^>]*>/g, "");
         finalHtml = finalHtml.replace(/<meta\s+name="twitter:image"[^>]*>/g, "");
 
-        // Inject SSR head tags before </head>
-        finalHtml = finalHtml.replace("</head>", `${head}\n</head>`);
+        // Build JSON-LD script tags for <head>
+        const ldTags = ldScripts
+          .map((s) => `<script type="application/ld+json">${s}</script>`)
+          .join("\n");
+
+        // Inject SSR head tags + JSON-LD before </head>
+        finalHtml = finalHtml.replace("</head>", `${head}\n${ldTags}\n</head>`);
       }
 
       // Determine output path

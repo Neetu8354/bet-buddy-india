@@ -35,7 +35,7 @@ const Hero = () => {
 
           <div className="mt-6 sm:mt-10 inline-flex items-center gap-2 text-[11px] sm:text-xs text-muted-foreground self-start">
             <ShieldCheck className="w-4 h-4 text-gold flex-shrink-0" />
-            Licensed · Encrypted · Trusted by 1M+ Indian players
+            Secure · Encrypted · Trusted by 1M+ Indian players
           </div>
         </div>
       </div>
