@@ -1,22 +1,19 @@
-import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import TickerBar from "@/components/TickerBar";
 import Hero from "@/components/Hero";
 import SEO from "@/components/SEO";
-
-// Above-the-fold loads eagerly; below-the-fold sections are lazy-split for faster LCP.
-const PromoSlider = lazy(() => import("@/components/PromoSlider"));
-const SportsSection = lazy(() => import("@/components/SportsSection"));
-const CasinoSection = lazy(() => import("@/components/CasinoSection"));
-const HowItWorks = lazy(() => import("@/components/HowItWorks"));
-const Features = lazy(() => import("@/components/Features"));
-const PaymentMethods = lazy(() => import("@/components/PaymentMethods"));
-const Providers = lazy(() => import("@/components/Providers"));
-const Testimonials = lazy(() => import("@/components/Testimonials"));
-const FAQ = lazy(() => import("@/components/FAQ"));
-const CTABanner = lazy(() => import("@/components/CTABanner"));
-const Footer = lazy(() => import("@/components/Footer"));
-const WhatsAppChatbot = lazy(() => import("@/components/WhatsAppChatbot"));
+import PromoSlider from "@/components/PromoSlider";
+import SportsSection from "@/components/SportsSection";
+import CasinoSection from "@/components/CasinoSection";
+import HowItWorks from "@/components/HowItWorks";
+import Features from "@/components/Features";
+import PaymentMethods from "@/components/PaymentMethods";
+import Providers from "@/components/Providers";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import CTABanner from "@/components/CTABanner";
+import Footer from "@/components/Footer";
+import WhatsAppChatbot from "@/components/WhatsAppChatbot";
 
 const SITE = "https://yolo365.live";
 
@@ -47,23 +44,19 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Suspense fallback={null}>
-          <PromoSlider />
-          <SportsSection />
-          <CasinoSection />
-          <HowItWorks />
-          <Features />
-          <PaymentMethods />
-          <Providers />
-          <Testimonials />
-          <FAQ />
-          <CTABanner />
-        </Suspense>
+        <PromoSlider />
+        <SportsSection />
+        <CasinoSection />
+        <HowItWorks />
+        <Features />
+        <PaymentMethods />
+        <Providers />
+        <Testimonials />
+        <FAQ />
+        <CTABanner />
       </main>
-      <Suspense fallback={null}>
-        <Footer />
-        <WhatsAppChatbot />
-      </Suspense>
+      <Footer />
+      <WhatsAppChatbot />
     </div>
   );
 };

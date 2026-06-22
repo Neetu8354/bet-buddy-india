@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, ComponentType } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
@@ -17,34 +17,61 @@ const Aviator = lazy(() => import("./pages/games/Aviator.tsx"));
 const AndarBahar = lazy(() => import("./pages/games/AndarBahar.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
-const queryClient = new QueryClient();
+export type PageComponents = {
+  Index: ComponentType;
+  Blog: ComponentType;
+  BlogPost: ComponentType;
+  About: ComponentType;
+  Contact: ComponentType;
+  Cricket: ComponentType;
+  TeenPatti: ComponentType;
+  Aviator: ComponentType;
+  AndarBahar: ComponentType;
+  NotFound: ComponentType;
+};
 
-const App = () => (
-  <HelmetProvider>
+const defaultPages: PageComponents = {
+  Index, Blog, BlogPost, About, Contact, Cricket, TeenPatti, Aviator, AndarBahar, NotFound,
+};
+
+export const AppRoutes = ({ pages = defaultPages }: { pages?: PageComponents }) => (
+  <Suspense fallback={<div className="min-h-screen" />}>
+    <Routes>
+      <Route path="/" element={<pages.Index />} />
+      <Route path="/blog" element={<pages.Blog />} />
+      <Route path="/blog/:slug" element={<pages.BlogPost />} />
+      <Route path="/about" element={<pages.About />} />
+      <Route path="/contact" element={<pages.Contact />} />
+      <Route path="/games/cricket-betting" element={<pages.Cricket />} />
+      <Route path="/games/teen-patti" element={<pages.TeenPatti />} />
+      <Route path="/games/aviator" element={<pages.Aviator />} />
+      <Route path="/games/andar-bahar" element={<pages.AndarBahar />} />
+      {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+      <Route path="*" element={<pages.NotFound />} />
+    </Routes>
+  </Suspense>
+);
+
+export const AppShell = ({ children, skipHelmet }: { children: React.ReactNode; skipHelmet?: boolean }) => {
+  const queryClient = new QueryClient();
+  const inner = (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <Suspense fallback={<div className="min-h-screen" />}>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/games/cricket-betting" element={<Cricket />} />
-              <Route path="/games/teen-patti" element={<TeenPatti />} />
-              <Route path="/games/aviator" element={<Aviator />} />
-              <Route path="/games/andar-bahar" element={<AndarBahar />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </BrowserRouter>
+        {children}
       </TooltipProvider>
     </QueryClientProvider>
-  </HelmetProvider>
+  );
+  return skipHelmet ? inner : <HelmetProvider>{inner}</HelmetProvider>;
+};
+
+const App = () => (
+  <AppShell>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  </AppShell>
 );
 
 export default App;
