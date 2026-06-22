@@ -12,7 +12,7 @@ const Testimonials = () => (
   <section className="container py-16">
     <div className="text-center mb-10 max-w-2xl mx-auto">
       <div className="eyebrow mb-2">Player reviews</div>
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Trusted by 1 million+ Indians</h2>
+      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Player reviews</h2>
     </div>
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
       {reviews.map((r) => (

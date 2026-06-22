@@ -236,7 +236,7 @@ Teen Patti winnings are credited instantly to your YOLO365 wallet. Withdrawals t
 Want the full live dealer experience? See our [Andar Bahar guide](/blog/andar-bahar-online-strategy-india) next.
 `,
     faqs: [
-      { q: "Is online Teen Patti legal in India?", a: "Teen Patti is classified as a game of skill in many Indian states (Karnataka, Maharashtra, West Bengal). YOLO365 operates under international gaming licenses and is widely used by Indian players." },
+      { q: "Is online Teen Patti legal in India?", a: "Teen Patti is classified as a game of skill in many Indian states (Karnataka, Maharashtra, West Bengal)." },
       { q: "What's the minimum bet?", a: "₹10 on entry-level tables. VIP tables go up to ₹1 lakh per hand." },
       { q: "Are the dealers real?", a: "Yes — all live Teen Patti tables on YOLO365 stream from physical studios with real human dealers, not RNG software." },
     ],

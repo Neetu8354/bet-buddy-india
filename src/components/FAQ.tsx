@@ -4,7 +4,7 @@ import { openWhatsApp } from "@/lib/wa";
 
 const faqs = [
   { q: "How do I get a Yolo365 betting ID?", a: "Click any 'Get ID' button on this page. It opens WhatsApp where our team will share your ID and password within 60 seconds." },
-  { q: "Is Yolo365 safe and legal in India?", a: "Yes. Yolo365 operates under international gaming licenses, uses bank-grade encryption, and is trusted by 1 million+ Indian players. Online betting is legal in most Indian states." },
+  { q: "Is Yolo365 safe and legal in India?", a: "Yes. Yolo365 uses bank-grade encryption to protect your data and transactions." },
   { q: "What is the minimum deposit?", a: "You can start with as little as ₹100. We accept UPI, PhonePe, GPay, Paytm, IMPS and net banking." },
   { q: "How long do withdrawals take?", a: "Most withdrawals are processed within 5 minutes directly to your Indian bank account, with no hidden fees." },
   { q: "Can I bet on IPL and cricket matches?", a: "Yes. Yolo365 covers every IPL match, international cricket (T20, ODI, Test), domestic leagues and women's cricket — with sharp odds." },
