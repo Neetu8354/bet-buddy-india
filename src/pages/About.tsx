@@ -34,16 +34,15 @@ const About = () => {
     { icon: Lock, title: "256-bit SSL Security", desc: "Bank-grade encryption protects every deposit, withdrawal, and personal detail." },
     { icon: HeartHandshake, title: "Responsible Gaming", desc: "Self-exclusion, deposit limits, and 18+ verification on every account." },
     { icon: Award, title: "1000+ Provider Games", desc: "Evolution, Ezugi, Pragmatic Play, Spribe, Betsoft and 50+ more studios." },
-    { icon: Users, title: "5 Lakh+ Active Users", desc: "India's fastest-growing cricket betting community since 2021." },
+    { icon: Users, title: "Growing Indian Community", desc: "A fast-growing community of cricket betting players across India since 2021." },
   ];
 
   return (
     <div className="min-h-screen">
       <SEO
         title="About YOLO365 — India's Trusted Cricket Betting ID & Live Casino Site"
-        description="Learn about YOLO365 — India's most trusted online cricket betting exchange since 2021. 5 lakh+ users, instant UPI deposits, 5-minute withdrawals, secure & regulated."
+        description="Learn about YOLO365 — a trusted online cricket betting exchange in India since 2021. Instant UPI deposits, 5-minute withdrawals, secure & regulated."
         canonical="/about"
-        keywords="about YOLO365, YOLO365 review, trusted cricket betting site India, online betting India, YOLO365 company"
         jsonLd={ld}
       />
       <Header />
@@ -54,7 +53,7 @@ const About = () => {
 
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">About <span className="text-gold">YOLO365</span></h1>
         <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-12">
-          YOLO365 is India's most trusted online cricket betting exchange and live casino platform. Since 2021, we've helped over 5 lakh Indian players get a verified cricket betting ID on WhatsApp in under 60 seconds — with instant UPI deposits, 5-minute withdrawals, and 24×7 Hindi support.
+          YOLO365 is a trusted online cricket betting exchange and live casino platform in India. Since 2021, we've helped Indian players get a verified cricket betting ID on WhatsApp in under 60 seconds — with instant UPI deposits, 5-minute withdrawals, and 24×7 Hindi support.
         </p>
 
         <section className="mb-16">
@@ -65,7 +64,7 @@ const About = () => {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-8">Why 5 Lakh+ Indians Trust YOLO365</h2>
+          <h2 className="text-2xl font-bold mb-8">Why Indian Players Trust YOLO365</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {values.map((v) => (
               <div key={v.title} className="p-6 rounded-xl border hairline bg-card/40 hover:border-gold/40 transition-colors">
@@ -81,7 +80,7 @@ const About = () => {
           <h2 className="text-2xl font-bold mb-6">YOLO365 by the Numbers</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {[
-              { n: "5L+", l: "Active Users" },
+              { n: "Trusted", l: "By Indian Players" },
               { n: "60s", l: "ID Activation" },
               { n: "5 min", l: "Withdrawals" },
               { n: "1000+", l: "Casino Games" },
@@ -95,7 +94,7 @@ const About = () => {
         </section>
 
         <section className="rounded-2xl border hairline bg-card/40 p-8 md:p-10 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">Ready to join India's #1 cricket betting community?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">Ready to join India's cricket betting community?</h2>
           <p className="text-muted-foreground mb-6">Get your YOLO365 betting ID on WhatsApp in 60 seconds.</p>
           <button onClick={openWhatsApp} className="px-7 h-12 rounded-md bg-gold text-primary-foreground font-semibold hover:opacity-90 transition-opacity">
             Get ID on WhatsApp

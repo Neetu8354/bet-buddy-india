@@ -184,7 +184,7 @@ const BlogPost = () => {
 
           <aside className="mt-14 p-6 md:p-8 rounded-lg border hairline bg-card/60 text-center">
             <h2 className="text-xl md:text-2xl font-semibold tracking-tight mb-2">Get your YOLO365 ID in 60 seconds</h2>
-            <p className="text-sm text-muted-foreground mb-5 max-w-md mx-auto">Apply everything in this guide on India's #1 cricket betting exchange. WhatsApp activation, instant INR deposits.</p>
+            <p className="text-sm text-muted-foreground mb-5 max-w-md mx-auto">Apply everything in this guide on a trusted cricket betting exchange in India. WhatsApp activation, instant INR deposits.</p>
             <button onClick={openWhatsApp} className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-md bg-gold text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
               <MessageCircle className="w-4 h-4" /> Get my ID on WhatsApp
             </button>

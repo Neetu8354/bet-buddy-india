@@ -42,7 +42,7 @@ const Blog = () => {
     <div className="min-h-screen">
       <SEO
         title="YOLO365 Blog — IPL Betting Tips, Cricket Strategy & Live Casino Guides 2026"
-        description="Expert IPL 2026 betting tips, cricket strategy, Teen Patti & live casino guides from YOLO365 — India's #1 cricket betting exchange. New articles every week."
+        description="Expert IPL 2026 betting tips, cricket strategy, Teen Patti & live casino guides from YOLO365 — a trusted cricket betting exchange in India. New articles every week."
         canonical="/blog"
         keywords="cricket betting blog, IPL betting tips, teen patti strategy, live casino guide india, yolo365 blog"
         jsonLd={[jsonLd, breadcrumbLd]}
@@ -59,7 +59,7 @@ const Blog = () => {
             Cricket betting tips, <span className="text-gold">IPL strategy</span> & live casino guides
           </h1>
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-            Long-form, data-backed articles from India's #1 cricket betting exchange. Every guide is written by punters who actually bet — not affiliates.
+            Long-form, data-backed articles from a trusted cricket betting exchange in India. Every guide is written by punters who actually bet — not affiliates.
           </p>
         </header>
 

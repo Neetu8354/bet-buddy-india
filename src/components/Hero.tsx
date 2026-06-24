@@ -35,7 +35,7 @@ const Hero = () => {
 
           <div className="mt-6 sm:mt-10 inline-flex items-center gap-2 text-[11px] sm:text-xs text-muted-foreground self-start">
             <ShieldCheck className="w-4 h-4 text-gold flex-shrink-0" />
-            Secure · Encrypted · Trusted by 1M+ Indian players
+            Secure · Encrypted · Trusted by Indian players
           </div>
         </div>
       </div>
@@ -44,8 +44,8 @@ const Hero = () => {
       <div className="border-t hairline bg-card/40">
         <div className="container grid grid-cols-2 md:grid-cols-4 divide-x hairline">
           {[
-            ["1M+", "Active players"],
-            ["₹100Cr+", "Paid out in 2025"],
+            ["Trusted", "By Indian players"],
+            ["Fast", "INR withdrawals"],
             ["24/7", "WhatsApp support"],
             ["60s", "ID activation"],
           ].map(([n, l]) => (
