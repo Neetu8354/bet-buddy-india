@@ -65,6 +65,13 @@ async function prerender() {
       // Replace the SSR outlet with rendered HTML (JSON-LD removed from body)
       let finalHtml = template.replace("<!--ssr-outlet-->", cleanAppHtml);
 
+      // Replace static homepage canonical with page-specific canonical
+      const pageUrl = `https://yolo365.live${route === "/" ? "" : route}`;
+      finalHtml = finalHtml.replace(
+        /<link rel="canonical" href="https:\/\/yolo365\.live\/" \/>/,
+        `<link rel="canonical" href="${pageUrl}" />`
+      );
+
       // Replace existing <head> tags with SSR-generated ones from Helmet.
       // Keep static tags as fallbacks if SSR doesn't generate them.
       if (head) {

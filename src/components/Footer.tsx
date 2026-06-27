@@ -91,9 +91,9 @@ const Footer = () => {
             <Link to="/about" className="hover:text-gold transition-colors">About</Link>
             <Link to="/contact" className="hover:text-gold transition-colors">Contact</Link>
             <Link to="/blog" className="hover:text-gold transition-colors">Blog</Link>
-            <button onClick={openWhatsApp} className="hover:text-gold transition-colors">Terms</button>
-            <button onClick={openWhatsApp} className="hover:text-gold transition-colors">Privacy</button>
-            <button onClick={openWhatsApp} className="hover:text-gold transition-colors">Responsible Gaming</button>
+            <a href="https://wa.link/reddyanna_" target="_blank" rel="noopener noreferrer" onClick={openWhatsApp} className="hover:text-gold transition-colors">Terms</a>
+            <a href="https://wa.link/reddyanna_" target="_blank" rel="noopener noreferrer" onClick={openWhatsApp} className="hover:text-gold transition-colors">Privacy</a>
+            <a href="https://wa.link/reddyanna_" target="_blank" rel="noopener noreferrer" onClick={openWhatsApp} className="hover:text-gold transition-colors">Responsible Gaming</a>
           </div>
         </div>
       </div>
