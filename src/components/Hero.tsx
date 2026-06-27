@@ -12,6 +12,7 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={900}
+          loading="eager"
         />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
@@ -25,12 +26,12 @@ const Hero = () => {
             India's sharpest odds on IPL 2026, international cricket and live casino — backed by 60-second WhatsApp onboarding, instant INR deposits and withdrawals that hit your bank in under five minutes.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
-            <button onClick={openWhatsApp} className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-md bg-gold text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity btn-glow">
+            <a href="https://wa.link/reddyanna_" target="_blank" rel="noopener noreferrer" onClick={openWhatsApp} className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-md bg-gold text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity btn-glow">
               <MessageCircle className="w-4 h-4" /> Claim your ID — 60 seconds
-            </button>
-            <button onClick={openWhatsApp} className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-md border hairline text-foreground hover:border-gold/50 hover:text-gold font-medium text-sm transition-colors">
+            </a>
+            <a href="https://wa.link/reddyanna_" target="_blank" rel="noopener noreferrer" onClick={openWhatsApp} className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 px-5 sm:px-6 rounded-md border hairline text-foreground hover:border-gold/50 hover:text-gold font-medium text-sm transition-colors">
               View promotions <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
 
           <div className="mt-6 sm:mt-10 inline-flex items-center gap-2 text-[11px] sm:text-xs text-muted-foreground self-start">

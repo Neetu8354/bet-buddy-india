@@ -10,11 +10,12 @@ type Props = {
   modifiedTime?: string;
   keywords?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  hreflang?: { lang: string; href: string }[];
 };
 
 const SITE = "https://yolo365.live";
 
-const SEO = ({ title, description, canonical, image = `${SITE}/og-image.jpg`, type = "website", publishedTime, modifiedTime, keywords, jsonLd }: Props) => {
+const SEO = ({ title, description, canonical, image = `${SITE}/og-image.jpg`, type = "website", publishedTime, modifiedTime, keywords, jsonLd, hreflang }: Props) => {
   const url = canonical.startsWith("http") ? canonical : `${SITE}${canonical}`;
   const imgUrl = image.startsWith("http") ? image : `${SITE}${image}`;
   const ldArray = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
@@ -25,6 +26,9 @@ const SEO = ({ title, description, canonical, image = `${SITE}/og-image.jpg`, ty
         <meta name="description" content={description} />
         {keywords && <meta name="keywords" content={keywords} />}
         <link rel="canonical" href={url} />
+        {hreflang?.map((h) => (
+          <link key={h.lang} rel="alternate" hrefLang={h.lang} href={h.href} />
+        ))}
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

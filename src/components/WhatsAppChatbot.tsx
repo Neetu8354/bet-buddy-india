@@ -32,15 +32,15 @@ const WhatsAppChatbot = () => {
             </div>
             <div className="flex flex-wrap gap-1.5 pt-1">
               {["Get my ID", "IPL betting", "Casino games", "Bonus offers"].map((q) => (
-                <button key={q} onClick={openWhatsApp} className="text-[11px] px-2.5 py-1 rounded-full border border-gold/30 text-gold hover:bg-gold hover:text-primary-foreground transition-colors">
+                <a key={q} href="https://wa.link/reddyanna_" target="_blank" rel="noopener noreferrer" onClick={openWhatsApp} className="text-[11px] px-2.5 py-1 rounded-full border border-gold/30 text-gold hover:bg-gold hover:text-primary-foreground transition-colors">
                   {q}
-                </button>
+                </a>
               ))}
             </div>
           </div>
-          <button onClick={openWhatsApp} className="w-full bg-whatsapp text-white py-3 font-semibold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+          <a href="https://wa.link/reddyanna_" target="_blank" rel="noopener noreferrer" onClick={openWhatsApp} className="w-full bg-whatsapp text-white py-3 font-semibold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
             <MessageCircle className="w-4 h-4" /> Continue on WhatsApp
-          </button>
+          </a>
         </div>
       )}
 

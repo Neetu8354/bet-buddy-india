@@ -46,9 +46,9 @@ const Footer = () => {
             </Link>
             <p className="text-sm text-muted-foreground mb-5 max-w-sm leading-relaxed">India's trusted online cricket betting and live casino exchange. Get your IPL betting ID on WhatsApp in 60 seconds.</p>
             <div className="space-y-2 text-sm">
-              <button onClick={openWhatsApp} className="flex items-center gap-2 text-foreground/85 hover:text-gold transition-colors">
+              <a href="https://wa.link/reddyanna_" target="_blank" rel="noopener noreferrer" onClick={openWhatsApp} className="flex items-center gap-2 text-foreground/85 hover:text-gold transition-colors">
                 <MessageCircle className="w-4 h-4 text-gold" /> WhatsApp support
-              </button>
+              </a>
               <div className="flex items-center gap-2 text-muted-foreground"><Clock className="w-4 h-4" /> Available 24/7</div>
               <div className="flex items-center gap-2 text-muted-foreground"><Mail className="w-4 h-4" /> support@yolo365.live</div>
             </div>
@@ -62,7 +62,7 @@ const Footer = () => {
                     {l.href ? (
                       <Link to={l.href} className="text-sm text-muted-foreground hover:text-gold transition-colors">{l.label}</Link>
                     ) : (
-                      <button onClick={openWhatsApp} className="text-sm text-muted-foreground hover:text-gold transition-colors text-left">{l.label}</button>
+                      <a href="https://wa.link/reddyanna_" target="_blank" rel="noopener noreferrer" onClick={openWhatsApp} className="text-sm text-muted-foreground hover:text-gold transition-colors">{l.label}</a>
                     )}
                   </li>
                 ))}
