@@ -111,6 +111,12 @@ async function prerender() {
       const outDir = path.resolve(clientDir, routePath.slice(1));
       const outFile = path.resolve(outDir, "index.html");
 
+      // Add defer to the main script tag for better page load performance
+      finalHtml = finalHtml.replace(
+        /(<script type="module"[^>]*)>/,
+        '$1 defer>'
+      );
+
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(outFile, finalHtml);
 
