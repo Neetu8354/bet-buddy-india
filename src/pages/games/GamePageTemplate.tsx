@@ -97,7 +97,8 @@ const GamePageTemplate = ({
             alt={imageAlt}
             width={1200}
             height={630}
-            loading="lazy"
+            loading="eager"
+            {...({ fetchpriority: "high" } as any)}
             decoding="async"
             className="mt-8 w-full rounded-xl border hairline"
           />
