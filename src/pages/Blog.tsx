@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { useMemo } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -9,7 +9,8 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 const SITE = "https://yolo365.live";
 
 const Blog = () => {
-  const [cat, setCat] = useState<(typeof categories)[number]>("All");
+  const [searchParams] = useSearchParams();
+  const cat = (searchParams.get("category") as (typeof categories)[number]) || "All";
   const filtered = useMemo(() => (cat === "All" ? posts : posts.filter((p) => p.category === cat)), [cat]);
 
   const jsonLd = {
@@ -65,13 +66,13 @@ const Blog = () => {
 
         <div className="flex flex-wrap gap-2 mb-10">
           {categories.map((c) => (
-            <button
+            <Link
               key={c}
-              onClick={() => setCat(c)}
-              className={`px-4 h-9 rounded-md text-sm font-medium border hairline transition-colors ${cat === c ? "bg-gold text-primary-foreground border-transparent" : "text-foreground/75 hover:text-gold hover:border-gold/40"}`}
+              to={c === "All" ? "/blog" : `/blog?category=${encodeURIComponent(c)}`}
+              className={`px-4 h-9 rounded-md text-sm font-medium border hairline transition-colors inline-flex items-center ${cat === c ? "bg-gold text-primary-foreground border-transparent" : "text-foreground/75 hover:text-gold hover:border-gold/40"}`}
             >
               {c}
-            </button>
+            </Link>
           ))}
         </div>
 
