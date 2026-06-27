@@ -50,6 +50,10 @@ const Contact = () => {
         canonical="/contact"
         keywords="contact YOLO365, YOLO365 customer support, YOLO365 WhatsApp number, YOLO365 helpline India"
         jsonLd={ld}
+        hreflang={[
+          { lang: "en-IN", href: "https://yolo365.live/contact" },
+          { lang: "x-default", href: "https://yolo365.live/contact" },
+        ]}
       />
       <Header />
       <main className="container py-16">

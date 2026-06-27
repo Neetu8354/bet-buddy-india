@@ -66,22 +66,36 @@ async function prerender() {
       let finalHtml = template.replace("<!--ssr-outlet-->", cleanAppHtml);
 
       // Replace existing <head> tags with SSR-generated ones from Helmet.
-      // This avoids duplicate <title>, <meta>, <link rel="canonical"> etc.
+      // Keep static tags as fallbacks if SSR doesn't generate them.
       if (head) {
-        // Remove existing tags that Helmet will manage
-        finalHtml = finalHtml.replace(/<title>[^<]*<\/title>/, "");
-        finalHtml = finalHtml.replace(/<meta\s+name="description"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<meta\s+name="keywords"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<link\s+rel="canonical"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<meta\s+property="og:title"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<meta\s+property="og:description"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<meta\s+property="og:url"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<meta\s+property="og:type"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<meta\s+property="og:image"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<meta\s+name="twitter:card"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<meta\s+name="twitter:title"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<meta\s+name="twitter:description"[^>]*>/g, "");
-        finalHtml = finalHtml.replace(/<meta\s+name="twitter:image"[^>]*>/g, "");
+        // Check which tags SSR actually generated
+        const hasTitle = head.includes("<title>");
+        const hasDesc = head.includes('name="description"');
+        const hasCanonical = head.includes('rel="canonical"');
+        const hasOgTitle = head.includes('property="og:title"');
+        const hasOgDesc = head.includes('property="og:description"');
+        const hasOgUrl = head.includes('property="og:url"');
+        const hasOgType = head.includes('property="og:type"');
+        const hasOgImage = head.includes('property="og:image"');
+        const hasTwitterCard = head.includes('name="twitter:card"');
+        const hasTwitterTitle = head.includes('name="twitter:title"');
+        const hasTwitterDesc = head.includes('name="twitter:description"');
+        const hasTwitterImage = head.includes('name="twitter:image"');
+
+        // Remove static tags only if SSR generated them
+        if (hasTitle) finalHtml = finalHtml.replace(/<title>[^<]*<\/title>/, "");
+        if (hasDesc) finalHtml = finalHtml.replace(/<meta\s+name="description"[^>]*>/g, "");
+        finalHtml = finalHtml.replace(/<meta\s+name="keywords"[^>]*>/g, ""); // Always remove keywords
+        if (hasCanonical) finalHtml = finalHtml.replace(/<link\s+rel="canonical"[^>]*>/g, "");
+        if (hasOgTitle) finalHtml = finalHtml.replace(/<meta\s+property="og:title"[^>]*>/g, "");
+        if (hasOgDesc) finalHtml = finalHtml.replace(/<meta\s+property="og:description"[^>]*>/g, "");
+        if (hasOgUrl) finalHtml = finalHtml.replace(/<meta\s+property="og:url"[^>]*>/g, "");
+        if (hasOgType) finalHtml = finalHtml.replace(/<meta\s+property="og:type"[^>]*>/g, "");
+        if (hasOgImage) finalHtml = finalHtml.replace(/<meta\s+property="og:image"[^>]*>/g, "");
+        if (hasTwitterCard) finalHtml = finalHtml.replace(/<meta\s+name="twitter:card"[^>]*>/g, "");
+        if (hasTwitterTitle) finalHtml = finalHtml.replace(/<meta\s+name="twitter:title"[^>]*>/g, "");
+        if (hasTwitterDesc) finalHtml = finalHtml.replace(/<meta\s+name="twitter:description"[^>]*>/g, "");
+        if (hasTwitterImage) finalHtml = finalHtml.replace(/<meta\s+name="twitter:image"[^>]*>/g, "");
 
         // Build JSON-LD script tags for <head>
         const ldTags = ldScripts

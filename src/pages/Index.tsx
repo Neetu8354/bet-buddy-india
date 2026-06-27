@@ -59,6 +59,10 @@ const Index = () => {
         description="YOLO365 is a trusted online cricket betting exchange in India. Get your IPL betting ID on WhatsApp in 60 seconds, instant INR deposits, 5-minute withdrawals, live Teen Patti, Andar Bahar & 1000+ casino games."
         canonical="/"
         jsonLd={homeLd}
+        hreflang={[
+          { lang: "en-IN", href: "https://yolo365.live/" },
+          { lang: "x-default", href: "https://yolo365.live/" },
+        ]}
       />
       <TickerBar />
       <Header />

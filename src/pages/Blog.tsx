@@ -47,6 +47,10 @@ const Blog = () => {
         canonical="/blog"
         keywords="cricket betting blog, IPL betting tips, teen patti strategy, live casino guide india, yolo365 blog"
         jsonLd={[jsonLd, breadcrumbLd]}
+        hreflang={[
+          { lang: "en-IN", href: "https://yolo365.live/blog" },
+          { lang: "x-default", href: "https://yolo365.live/blog" },
+        ]}
       />
       <Header />
       <main className="container py-10 md:py-16">

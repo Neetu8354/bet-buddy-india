@@ -7,6 +7,10 @@ const AndarBahar = () => (
     description="Play Andar Bahar online for real INR money on YOLO365 — live Indian dealers, ₹100 min bet, side bets up to 120×, instant UPI deposit & 5-min withdrawal."
     keywords="Andar Bahar online real money, Andar Bahar live India, Katti game online, Andar Bahar UPI, live Andar Bahar YOLO365, AB game real money"
     h1="Andar Bahar Online Live — Real Money"
+    hreflang={[
+      { lang: "en-IN", href: "https://yolo365.live/games/andar-bahar" },
+      { lang: "x-default", href: "https://yolo365.live/games/andar-bahar" },
+    ]}
     intro="Play the classic Indian game Andar Bahar online for real money on YOLO365. Live dealers from Ezugi and Evolution stream 24×7, ₹100 minimum bet, side bets paying up to 120×, and instant UPI deposit + 5-minute withdrawal."
     imageAlt="Andar Bahar online real money game on yolo365.live with live Indian dealer"
     highlights={[

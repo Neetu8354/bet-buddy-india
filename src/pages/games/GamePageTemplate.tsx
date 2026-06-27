@@ -22,11 +22,12 @@ export type GamePageProps = {
   faqs: { q: string; a: string }[];
   relatedSlugs?: { slug: string; label: string }[];
   imageAlt: string;
+  hreflang?: { lang: string; href: string }[];
 };
 
 const GamePageTemplate = ({
   slug, title, description, keywords, h1, intro,
-  highlights, howToPlay, strategyTitle, strategy, faqs, relatedSlugs = [], imageAlt,
+  highlights, howToPlay, strategyTitle, strategy, faqs, relatedSlugs = [], imageAlt, hreflang,
 }: GamePageProps) => {
   const url = `${SITE}/games/${slug}`;
   const ld = [
@@ -73,7 +74,7 @@ const GamePageTemplate = ({
 
   return (
     <div className="min-h-screen">
-      <SEO title={title} description={description} canonical={`/games/${slug}`} keywords={keywords} jsonLd={ld} image={`${SITE}/og-image.jpg`} />
+      <SEO title={title} description={description} canonical={`/games/${slug}`} keywords={keywords} jsonLd={ld} image={`${SITE}/og-image.jpg`} hreflang={hreflang} />
       <Header />
       <main className="container py-12">
         <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground mb-5">

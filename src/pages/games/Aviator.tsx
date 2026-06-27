@@ -7,6 +7,10 @@ const Aviator = () => (
     description="Play Aviator crash game online for real INR money on YOLO365 — Spribe original, 97% RTP, ₹10 min bet, auto cashout, instant UPI deposit & withdrawal."
     keywords="Aviator game online India, Aviator real money, Spribe Aviator, Aviator crash game, Aviator UPI deposit, how to win Aviator YOLO365"
     h1="Aviator Crash Game — Real Money Online"
+    hreflang={[
+      { lang: "en-IN", href: "https://yolo365.live/games/aviator" },
+      { lang: "x-default", href: "https://yolo365.live/games/aviator" },
+    ]}
     intro="Play the original Aviator crash game by Spribe on YOLO365 for real INR money. 97% RTP, ₹10 minimum bet, dual-bet auto cashout, provably fair — and the fastest growing crash game in India with thousands of players in every round."
     imageAlt="Aviator crash game online real money on yolo365.live with multiplier curve"
     highlights={[

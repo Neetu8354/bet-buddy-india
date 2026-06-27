@@ -7,6 +7,10 @@ const TeenPatti = () => (
     description="Play Teen Patti online for real money on YOLO365 — live dealers from Evolution & Ezugi, ₹100 min bet, instant UPI deposit, 5-minute INR withdrawal."
     keywords="Teen Patti online real money, Teen Patti live India, 3 Patti online betting, Teen Patti UPI deposit, live Teen Patti YOLO365, online 3 Patti India"
     h1="Teen Patti Online Live — Real Money"
+    hreflang={[
+      { lang: "en-IN", href: "https://yolo365.live/games/teen-patti" },
+      { lang: "x-default", href: "https://yolo365.live/games/teen-patti" },
+    ]}
     intro="Play Teen Patti online for real INR money on YOLO365 with live dealers streaming 24×7 from Evolution Gaming and Ezugi studios. Classic 3 Patti, Joker variant, AB side bets, ₹100 minimum stake — and instant UPI cashout in under 5 minutes."
     imageAlt="Live Teen Patti online real money game on yolo365.live with Indian dealer"
     highlights={[

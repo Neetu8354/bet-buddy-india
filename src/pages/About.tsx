@@ -44,6 +44,10 @@ const About = () => {
         description="Learn about YOLO365 — a trusted online cricket betting exchange in India since 2021. Instant UPI deposits, 5-minute withdrawals, secure & regulated."
         canonical="/about"
         jsonLd={ld}
+        hreflang={[
+          { lang: "en-IN", href: "https://yolo365.live/about" },
+          { lang: "x-default", href: "https://yolo365.live/about" },
+        ]}
       />
       <Header />
       <main className="container py-16">
