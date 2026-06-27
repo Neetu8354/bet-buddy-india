@@ -13,6 +13,7 @@ const Hero = () => {
           width={1920}
           height={900}
           loading="eager"
+          {...({ fetchpriority: "high" } as any)}
         />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />

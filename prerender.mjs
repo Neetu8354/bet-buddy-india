@@ -72,6 +72,16 @@ async function prerender() {
         `<link rel="canonical" href="${pageUrl}" />`
       );
 
+      // Replace static homepage hreflang with page-specific hreflang
+      finalHtml = finalHtml.replace(
+        /<link rel="alternate" hreflang="en-IN" href="https:\/\/yolo365\.live\/" \/>/,
+        `<link rel="alternate" hreflang="en-IN" href="${pageUrl}" />`
+      );
+      finalHtml = finalHtml.replace(
+        /<link rel="alternate" hreflang="x-default" href="https:\/\/yolo365\.live\/" \/>/,
+        `<link rel="alternate" hreflang="x-default" href="${pageUrl}" />`
+      );
+
       // Replace existing <head> tags with SSR-generated ones from Helmet.
       // Keep static tags as fallbacks if SSR doesn't generate them.
       if (head) {
